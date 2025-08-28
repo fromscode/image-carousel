@@ -8,6 +8,8 @@ body {
 
 .wide-container {
   display: flex;
+  justify-content: center;
+  translate: 396.8px;
 }
 
 img {
@@ -16,8 +18,12 @@ img {
 }
 
 .frame {
-  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  height: 320px;
   width: 400px;
   border: 2px solid black;
-  position: absolute;
+  background-color: grey;
 }

@@ -11,9 +11,11 @@ const allImages = [image1, image2, image3];
 
 const wideCont = document.querySelector(".wide-container");
 
+let index = 0;
 for (const img of allImages) {
   const elemnt = document.createElement("img");
   elemnt.src = img;
   elemnt.height = 300;
   wideCont.append(elemnt);
+  ++index;
 }
