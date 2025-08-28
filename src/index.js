@@ -10,12 +10,17 @@ console.log("test");
 const allImages = [image1, image2, image3];
 
 const wideCont = document.querySelector(".wide-container");
+const navDots = document.querySelector(".nav-dots");
 
 for (const img of allImages) {
   const elemnt = document.createElement("img");
   elemnt.src = img;
   elemnt.height = 300;
   wideCont.append(elemnt);
+
+  const dot = document.createElement("div");
+  dot.id = "dot";
+  navDots.append(dot);
 }
 
 const xlist = [-400, 0, 400];
