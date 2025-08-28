@@ -50,3 +50,15 @@ nextBtn.addEventListener('click', () => {
     document.querySelector(".dot.curr").classList.remove("curr");
     document.querySelector(".dot#index-" + index).classList.add("curr");
 });
+
+const dots = document.querySelectorAll(".dot");
+
+dots.forEach(dot => {
+    dot.addEventListener('click', () => {
+        document.querySelector(".dot.curr").classList.remove("curr");
+        dot.classList.add("curr");
+        
+        index = +dot.id[dot.id.length - 1];
+        wideCont.style.translate = xlist[index] + "px";
+    })
+})
