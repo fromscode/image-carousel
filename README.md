@@ -1,3 +1,5 @@
-# webpack-template
+# image-carousel
 
-feel free to use
+An image carousel
+
+[Check it out](https://fromscode.github.io/image-carousel/)
