@@ -5,3 +5,19 @@ body {
   align-items: center;
   justify-content: center;
 }
+
+.wide-container {
+  display: flex;
+}
+
+img {
+  height: 300px;
+  width: auto;
+}
+
+.frame {
+  height: 300px;
+  width: 400px;
+  border: 2px solid black;
+  position: absolute;
+}
