@@ -62,3 +62,5 @@ dots.forEach(dot => {
         wideCont.style.translate = xlist[index] + "px";
     })
 })
+
+setInterval(() => nextBtn.click(), 2000);
