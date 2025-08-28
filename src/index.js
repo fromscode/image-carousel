@@ -12,6 +12,9 @@ const allImages = [image1, image2, image3];
 const wideCont = document.querySelector(".wide-container");
 const navDots = document.querySelector(".nav-dots");
 
+const xlist = [400, 0, -400];
+let index = 0;
+
 for (const img of allImages) {
   const elemnt = document.createElement("img");
   elemnt.src = img;
@@ -19,23 +22,31 @@ for (const img of allImages) {
   wideCont.append(elemnt);
 
   const dot = document.createElement("div");
-  dot.id = "dot";
+  dot.classList.add("dot");
   navDots.append(dot);
+  dot.id = "index-" + index;
+  if (index === 1) {
+    dot.classList.add("curr");
+  }
+  index = (index + 1) % xlist.length;
 }
 
-const xlist = [-400, 0, 400];
-let index = 1;
+index = 1;
 
 const prevBtn = document.querySelector("#prev-btn");
 const nextBtn = document.querySelector("#next-btn");
 
 prevBtn.addEventListener('click', () => {
-    index = (index + 1) % xlist.length;
-    wideCont.style.translate = xlist[index] + "px";
-});
-
-nextBtn.addEventListener('click', () => {
     index = index - 1;
     if (index < 0) index = xlist.length + index;
     wideCont.style.translate = xlist[index] + "px";
+    document.querySelector(".dot.curr").classList.remove("curr");
+    document.querySelector(".dot#index-" + index).classList.add("curr");
+});
+
+nextBtn.addEventListener('click', () => {
+    index = (index + 1) % xlist.length;
+    wideCont.style.translate = xlist[index] + "px";
+    document.querySelector(".dot.curr").classList.remove("curr");
+    document.querySelector(".dot#index-" + index).classList.add("curr");
 });

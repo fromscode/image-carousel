@@ -63,13 +63,17 @@ button:hover {
   gap: 10px;
 }
 
-#dot {
+.dot {
   height: 20px;
   width: 20px;
   border-radius: 100%;
   background-color: grey;
 }
 
-#dot:hover {
+.dot:hover {
+  background-color: white;
+}
+
+.dot.curr {
   background-color: white;
 }
